@@ -1,4 +1,4 @@
-import heoImg from '../../assets/images/hero-img.webp';
+import heroImg from '../../assets/images/hero-img.webp';
 
 import './Welcome.styles.css';
 
@@ -9,11 +9,11 @@ const Welcome = () => {
         <div>
           <h1 className='welcome'>Üdvözöllek!</h1>
           <h2 className='me'>Én Dávid vagyok</h2>
-          <p>Front End Fejlesztő</p>
+          <p className='welcome-p'>Front End Fejlesztő</p>
         </div>
 
         <div className='hero-media'>
-          <img src={heoImg} alt='Hero' />
+          <img src={heroImg} alt='Hero' />
         </div>
       </div>
     </section>

@@ -40,6 +40,10 @@ p {
   font-size: 18px;
 }
 
+a {
+  color: white;
+}
+
 span {
   color: #ffb357;
 }
@@ -62,4 +66,16 @@ span {
   color: #ffb357;
   font-size: 30px;
   line-height: 1;
+}
+
+@media (max-width: 800px) {
+  .section {
+    padding: 80px 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .section {
+    padding: 80px 20px;
+  }
 }

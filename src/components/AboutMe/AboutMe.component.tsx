@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { IonIcon } from '@ionic/react';
 import { caretDownSharp, caretUpSharp } from 'ionicons/icons';
 
-import htmlCssJsIcon from '../../assets/images/html-js-css-logo.png';
+import htmlCssJsIcon from '../../assets/images/html-js-css-logo.webp';
 
 import './AboutMe.styles.css';
 

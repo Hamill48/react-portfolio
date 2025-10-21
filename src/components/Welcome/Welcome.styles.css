@@ -27,3 +27,20 @@
   box-shadow: 0 8px 24px rgb(0 0 0 / 30%);
   max-width: 420px;
 }
+
+@media (max-width: 950px) {
+  .welcome-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .welcome,
+  .me,
+  .welcome-p {
+    text-align: center;
+  }
+
+  .hero-media img {
+    width: 80%;
+  }
+}

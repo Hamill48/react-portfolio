@@ -1,3 +1,6 @@
+import { IonIcon } from '@ionic/react';
+import { chevronForwardOutline, caretForwardOutline } from 'ionicons/icons';
+
 import './Card.styles.css';
 
 type Props = {
@@ -5,9 +8,9 @@ type Props = {
   text: string;
   link?: string;
   href?: string;
-  iconURL?: string;
+  iconURL?: string[];
   buttonText: string;
-  onClick: () => void;
+  onClick: string;
 };
 
 const Card = ({
@@ -24,10 +27,36 @@ const Card = ({
       <h3 className='card-title'>{title}</h3>
       <p className='card-text'>{text}</p>
       <div className='card-inner-container'>
-        {link && <a href={href}>{link}</a>}
-        {iconURL && <img src={iconURL} />}
+        {link ? (
+          <a
+            href={href}
+            className='card-link'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            {link}{' '}
+            <IonIcon icon={chevronForwardOutline} className='card-link-icon' />
+          </a>
+        ) : (
+          <div className='card-placeholder-container'></div>
+        )}
+        {iconURL && (
+          <div className='icon-container'>
+            {iconURL.map((url) => (
+              <img className='card-icon' src={url} />
+            ))}
+          </div>
+        )}
       </div>
-      <button onClick={onClick}>{buttonText}</button>
+      <a
+        href={onClick}
+        className='card-button'
+        target='_blank'
+        rel='noopener noreferrer'
+      >
+        {buttonText}{' '}
+        <IonIcon icon={caretForwardOutline} className='card-button-icon' />
+      </a>
     </div>
   );
 };
