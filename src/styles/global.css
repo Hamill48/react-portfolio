@@ -24,9 +24,39 @@ h1 {
 }
 
 h2 {
+  font-size: 25px;
+  color: #ffb357;
+}
+
+h3 {
   color: #ffb357;
 }
 
 p {
   color: white;
+  font-size: 18px;
+}
+
+span {
+  color: #ffb357;
+}
+
+.list {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  justify-items: start;
+  margin-bottom: 20px;
+}
+
+.list-p {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dot {
+  color: #ffb357;
+  font-size: 30px;
+  line-height: 1;
 }
