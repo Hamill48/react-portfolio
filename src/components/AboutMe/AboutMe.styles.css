@@ -1,9 +1,6 @@
 .about-section {
   margin-top: 4px;
   background-color: #2d2e30;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .about-title {

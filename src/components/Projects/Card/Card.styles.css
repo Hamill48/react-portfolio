@@ -1,0 +1,18 @@
+.card {
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.card-title {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  margin-bottom: 10px;
+}
+
+.card-inner-container {
+  display: flex;
+}
