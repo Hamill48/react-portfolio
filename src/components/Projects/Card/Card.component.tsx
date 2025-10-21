@@ -43,7 +43,7 @@ const Card = ({
         {iconURL && (
           <div className='icon-container'>
             {iconURL.map((url) => (
-              <img className='card-icon' src={url} />
+              <img className='card-icon' src={url} alt='' aria-hidden='true' />
             ))}
           </div>
         )}

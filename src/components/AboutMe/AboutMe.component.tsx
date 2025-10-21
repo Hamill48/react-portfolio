@@ -130,7 +130,7 @@ const AboutMe = () => {
         </button>
 
         <div className='about-img-container'>
-          <img src={htmlCssJsIcon} />
+          <img src={htmlCssJsIcon} alt='html css icon' />
         </div>
       </div>
     </section>
