@@ -1,14 +1,24 @@
 import { IonIcon } from '@ionic/react';
 import { mail, logoLinkedin } from 'ionicons/icons';
 
+import { Locale } from '../../utils/localStorage'; // Type
+
 import './Footer.styles.css';
 
-const Footer = () => {
+type Props = {
+  locale: Locale;
+};
+
+const Footer = ({ locale }: Props) => {
+  const isEnglish = locale === 'en';
+
   return (
     <footer>
-      <section className='section'>
+      <section className='section' id='contact'>
         <div className='container footer-container'>
-          <h2 className='footer-title'>Vedd fel velem a kapcsolatot!</h2>
+          <h2 className='footer-title'>
+            {isEnglish ? 'Contact me!' : 'Vedd fel velem a kapcsolatot!'}
+          </h2>
           <div className='footer-contact-container'>
             <a
               className='footer-contact'
@@ -26,7 +36,7 @@ const Footer = () => {
               rel='noopener noreferrer'
             >
               <IonIcon icon={logoLinkedin} className='footer-icon' />
-              <p>Szenyita Dávid</p>
+              <p>{isEnglish ? 'David Szenyita' : 'Szenyita Dávid'}</p>
             </a>
           </div>
         </div>

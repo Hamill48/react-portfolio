@@ -1,37 +1,44 @@
-import { useState } from 'react';
+import { Locale } from '../../utils/localStorage'; // Type
 
 import './Navbar.styles.css';
 
-type Locale = 'hu' | 'en';
+type Props = {
+  locale: Locale;
+  onLocaleChange: (loc: Locale) => void;
+};
 
-const Navbar = () => {
-  const [language, setLanguage] = useState<Locale>('hu');
-  console.log(language);
+const Navbar = ({ locale, onLocaleChange }: Props) => {
+  const isEnglish = locale === 'en';
 
   return (
     <header className='nav-root'>
       <nav className='nav-bar'>
         <ul className='nav-links'>
-          <a href='#about'>Rólam</a>
-          <a href='#projects'>Projekteim</a>
-          <a href='#contact'>Kapcsolat</a>
+          <li>
+            <a href='#about'>{isEnglish ? 'About' : 'Rólam'}</a>
+          </li>
+          <li>
+            <a href='#projects'>{isEnglish ? 'Projects' : 'Projekteim'}</a>
+          </li>
+          <li>
+            <a href='#contact'>{isEnglish ? 'Contact' : 'Kapcsolat'}</a>
+          </li>
         </ul>
 
-        {/* Nyelvválasztó – szegmens kapcsoló */}
-        <div className='lang-switch' role='group' aria-label='Nyelvválasztó'>
+        <div className='lang-switch' role='group'>
           <button
             type='button'
-            // className={activeLocale === "hu" ? "active" : ""}
-            // aria-pressed={activeLocale === "hu"}
-            onClick={() => setLanguage('hu')}
+            className={locale === 'hu' ? 'active' : ''}
+            aria-pressed={locale === 'hu'}
+            onClick={() => onLocaleChange('hu')}
           >
             HU
           </button>
           <button
             type='button'
-            // className={activeLocale === "en" ? "active" : ""}
-            // aria-pressed={activeLocale === "en"}
-            onClick={() => setLanguage('en')}
+            className={locale === 'en' ? 'active' : ''}
+            aria-pressed={locale === 'en'}
+            onClick={() => onLocaleChange('en')}
           >
             EN
           </button>
