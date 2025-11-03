@@ -120,7 +120,7 @@ const AboutMe = ({ locale }: Props) => {
           </p>
           <p className='list-p'>
             <span className='dot'>· </span>Node.js{' '}
-            {isEnglish ? '(6 months)' : '(fél év)'}
+            {isEnglish ? '(1 year)' : '(1 év)'}
           </p>
           <p className='list-p'>
             <span className='dot'>· </span>Figma
