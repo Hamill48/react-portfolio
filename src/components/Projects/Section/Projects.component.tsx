@@ -40,8 +40,8 @@ const Projects = ({ locale }: Props) => {
             link={isEnglish ? 'Project website' : 'A projekt weboldala'}
             href='https://davenextworks.com/leafiqo/'
             iconURL={leafiqoIcons}
-            onClick='https://drive.google.com/file/d/1tKo70wkXx3RGjMZUbc75-jSq-zu0oo_W/view?usp=drive_link'
-            buttonText={isEnglish ? 'Download the demo' : 'Letöltöm a demót'}
+            onClick='https://play.google.com/store/apps/details?id=com.hamill48.plantapp'
+            buttonText={isEnglish ? 'Download' : 'Letöltöm'}
           />
           <Card
             title={isEnglish ? 'This website' : 'Ez a weboldal'}
