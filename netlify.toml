@@ -1,0 +1,6 @@
+
+[[redirects]]
+  from = "/*"
+  to = "https://david26-portfolio.vercel.app/hu"
+  status = 301
+  force = true
